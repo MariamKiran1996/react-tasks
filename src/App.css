@@ -1,0 +1,21 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+ body{width: 100%;}
+
+.clockForm{border: 1px solid #ccc; border-radius: 5px; padding: 20px;margin: 30px auto; width: 500px; background: #ecfcf6;}
+.clockForm div>label{display: block; text-align: left; margin-bottom: 5px; color: #000;}
+input{width: 100%; line-height: 25px; height: 25px; border: 1px solid #ccc; border-radius: 5px;}
+textarea{width: 100%; border: 1px solid #ccc;}
+.error{color: red; text-align: right; font-size: 14px;}
+.clockForm .radioGroup label{display: inline-block; font-size: 14px; text-align: center;}
+.radioGroup{text-align: left;}
+select{width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ccc;}
+  .submitBtn{margin:5px; min-width: 150px; padding: 10px 20px;    background: #3ca099;
+    color: #fff; border: none;}
