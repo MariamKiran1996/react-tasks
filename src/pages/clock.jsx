@@ -1,7 +1,8 @@
 import React from 'react'
 import ClockForm from '../components/clockForm'
+import DisplayClock from '../components/displayClock';
 
-export default function clock() {
+export default function Clock() {
     const [formValues, setFormValues] = useState([]);
     const handleFormSubmit = (values)=>{
         setFormValues(values);
@@ -13,6 +14,7 @@ export default function clock() {
     <div>
         <h1>clock Form</h1>
         <ClockForm onSubmit = {handleFormSubmit}></ClockForm>
+        <DisplayClock values={formValues} />
 
     </div>
   )

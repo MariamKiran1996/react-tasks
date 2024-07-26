@@ -30,14 +30,15 @@ const initialValues = {
   urlInput: '',
 };
 
-const clockForm = ({onSubmit}) => (
-    
+const ClockForm = ({onSubmit}) => (
+    <>
+    {console.log("onSubmit", onSubmit)}
   <Formik
     initialValues={initialValues}
     validationSchema={validationSchema}
     onSubmit={(values) => {
         onSubmit(values);
-    }}
+      }}
   >
     {({ setFieldValue }) => (
       <Form className='clockForm'>
@@ -170,6 +171,7 @@ const clockForm = ({onSubmit}) => (
       </Form>
     )}
   </Formik>
+  </>
 );
 
-export default clockForm;
+export default ClockForm;
