@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
@@ -30,12 +30,13 @@ const initialValues = {
   urlInput: '',
 };
 
-const clockForm = () => (
+const clockForm = ({onSubmit}) => (
+    
   <Formik
     initialValues={initialValues}
     validationSchema={validationSchema}
     onSubmit={(values) => {
-      console.log(values);
+        onSubmit(values);
     }}
   >
     {({ setFieldValue }) => (
