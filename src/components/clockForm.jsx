@@ -30,14 +30,21 @@ const initialValues = {
   urlInput: '',
 };
 
-const ClockForm = ({onSubmit}) => (
-    <>
-    {console.log("onSubmit", onSubmit)}
+const ClockForm = ({onSubmit}) => {
+    console.log('Received onSubmit:', onSubmit);
+    return(
+    
+    
   <Formik
     initialValues={initialValues}
     validationSchema={validationSchema}
     onSubmit={(values) => {
-        onSubmit(values);
+        console.log('Submitting form with values:', values); 
+        if (onSubmit) {
+          onSubmit(values);
+        } else {
+          console.error('onSubmit prop is undefined');
+        }
       }}
   >
     {({ setFieldValue }) => (
@@ -171,7 +178,7 @@ const ClockForm = ({onSubmit}) => (
       </Form>
     )}
   </Formik>
-  </>
-);
+    )
+};
 
 export default ClockForm;
