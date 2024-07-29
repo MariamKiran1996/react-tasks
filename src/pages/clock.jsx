@@ -14,7 +14,7 @@ const Clock=()=> {
     
     <div>
         <h1>clock Form</h1>
-        <ClockForm onSubmit = {handleFormSubmit}></ClockForm>
+        <ClockForm onHandleFormSubmit = {handleFormSubmit} />
         <DisplayClock values={formValues} />
 
     </div>

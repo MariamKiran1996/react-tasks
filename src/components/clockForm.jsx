@@ -30,8 +30,14 @@ const initialValues = {
   urlInput: '',
 };
 
-const ClockForm = ({onSubmit}) => {
-    console.log('Received onSubmit:', onSubmit);
+const ClockForm = ({onHandleFormSubmit}) => {
+    
+
+    const handleSubmit = (values)=>{
+        console.log('Received onSubmit:', onHandleFormSubmit);
+        onHandleFormSubmit(values)
+    }
+    
     return(
     
     
@@ -39,12 +45,7 @@ const ClockForm = ({onSubmit}) => {
     initialValues={initialValues}
     validationSchema={validationSchema}
     onSubmit={(values) => {
-        console.log('Submitting form with values:', values); 
-        if (onSubmit) {
-          onSubmit(values);
-        } else {
-          console.error('onSubmit prop is undefined');
-        }
+       handleSubmit(values)
       }}
   >
     {({ setFieldValue }) => (
