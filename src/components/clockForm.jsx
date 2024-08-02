@@ -4,39 +4,39 @@ import * as Yup from 'yup';
 
 const validationSchema = Yup.object({
     name: Yup.string().required('Required'),
-    email: Yup.string().email('Invalid email').required('Required'),
-    number: Yup.number().required('Required'),
-    password: Yup.string().required('Required'),
-    textareaInput: Yup.string().required('Required'),
-    gender: Yup.string().required('Required'),
-    checkboxInput: Yup.array().min(1, 'At least one checkbox is required'),
-    radioInput: Yup.string().required('Required'),
-    dateInput: Yup.date().required('Required'),
-    fileInput: Yup.mixed().required('Required'),
-    urlInput: Yup.string().url('Invalid URL').required('Required'),
+    // email: Yup.string().email('Invalid email').required('Required'),
+    // number: Yup.number().required('Required'),
+    // password: Yup.string().required('Required'),
+    // textareaInput: Yup.string().required('Required'),
+    // gender: Yup.string().required('Required'),
+    // checkboxInput: Yup.array().min(1, 'At least one checkbox is required'),
+    // radioInput: Yup.string().required('Required'),
+    // dateInput: Yup.date().required('Required'),
+    // fileInput: Yup.mixed().required('Required'),
+    // urlInput: Yup.string().url('Invalid URL').required('Required'),
 });
 
 const initialValues = {
     name: '',
-    email: '',
-    number: '',
-    password: '',
-    textareaInput: '',
-    gender: '',
-    checkboxInput: [],
-    radioInput: '',
-    dateInput: '',
-    fileInput: null,
-    urlInput: '',
+    // email: '',
+    // number: '',
+    // password: '',
+    // textareaInput: '',
+    // gender: '',
+    // checkboxInput: [],
+    // radioInput: '',
+    // dateInput: '',
+    // fileInput: null,
+    // urlInput: '',
 };
 
-const ClockForm = ({ setFormValues }) => {
+const ClockForm = ({ handleFormSubmit }) => {
 
 
     const handleSubmit = (values) => {
         
-        console.log('Received onSubmit:', values, setFormValues);
-        setFormValues(values)
+        console.log('Received onSubmit:', values, handleFormSubmit);
+        handleFormSubmit(values)
     }
 
     return (
@@ -59,7 +59,7 @@ const ClockForm = ({ setFormValues }) => {
                             <ErrorMessage name="name" />
                         </div>
                     </div>
-                    <div>
+                    {/* <div>
                         <label htmlFor="number">Number</label>
                         <Field name="number" type="number" />
                         <div class='error'>
@@ -175,7 +175,7 @@ const ClockForm = ({ setFormValues }) => {
                         <div class='error'>
                             <ErrorMessage name="urlInput" />
                         </div>
-                    </div>
+                    </div> */}
 
                     <button type="submit" className='submitBtn'>Submit</button>
                 </Form>
