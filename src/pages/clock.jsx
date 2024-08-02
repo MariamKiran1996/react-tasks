@@ -4,17 +4,18 @@ import DisplayClock from '../components/displayClock';
 
 const Clock=()=> {
     const [formValues, setFormValues] = useState([]);
-    const handleFormSubmit = (values)=>{
-        console.log("values", values)
-        setFormValues(values);
-
-    }
+    console.log("values in parent", values, formValues);
+    // const handleFormSubmit = (values) => {
+    //     console.log("values", values)
+    //     setFormValues(values);
+    // }
     
   return (
     
     <div>
         <h1>clock Form</h1>
-        <ClockForm onHandleFormSubmit = {handleFormSubmit} />
+       
+        <ClockForm setFormValues={setFormValues} />
         <DisplayClock values={formValues} />
 
     </div>
