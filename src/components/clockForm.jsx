@@ -35,7 +35,7 @@ const ClockForm = ({ handleFormSubmit }) => {
 
     const handleSubmit = (values) => {
         
-        console.log('Received onSubmit:', values, handleFormSubmit);
+       
         handleFormSubmit(values)
     }
 
