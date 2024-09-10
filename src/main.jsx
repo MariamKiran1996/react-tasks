@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import ClockForm from './components/clockForm.jsx'
+import Clock from './pages/clock.jsx'
 
 const router = createBrowserRouter([
   {path:'/', element:<App/>},
-  {path:'/clockForm', element:<ClockForm/>}
+  {path:'/Clock', element:<Clock/>}
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

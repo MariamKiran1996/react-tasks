@@ -3,8 +3,8 @@ import ClockForm from '../components/clockForm'
 import DisplayClock from '../components/displayClock';
 
 const Clock=()=> {
-    const [formValues, setFormValues] = useState([]);
-    console.log("values in parent", values, formValues);
+    const [formValues, setFormValues] = useState({});
+    // console.log("values in parent", values, formValues);
     const handleFormSubmit = (values) => {
         console.log("values", values)
         setFormValues(values);

@@ -4,30 +4,30 @@ import * as Yup from 'yup';
 
 const validationSchema = Yup.object({
     name: Yup.string().required('Required'),
-    // email: Yup.string().email('Invalid email').required('Required'),
-    // number: Yup.number().required('Required'),
-    // password: Yup.string().required('Required'),
-    // textareaInput: Yup.string().required('Required'),
-    // gender: Yup.string().required('Required'),
-    // checkboxInput: Yup.array().min(1, 'At least one checkbox is required'),
-    // radioInput: Yup.string().required('Required'),
-    // dateInput: Yup.date().required('Required'),
-    // fileInput: Yup.mixed().required('Required'),
-    // urlInput: Yup.string().url('Invalid URL').required('Required'),
+    email: Yup.string().email('Invalid email').required('Required'),
+    number: Yup.number().required('Required'),
+    password: Yup.string().required('Required'),
+    textareaInput: Yup.string().required('Required'),
+    gender: Yup.string().required('Required'),
+    checkboxInput: Yup.array().min(1, 'At least one checkbox is required'),
+    radioInput: Yup.string().required('Required'),
+    dateInput: Yup.date().required('Required'),
+    fileInput: Yup.mixed().required('Required'),
+    urlInput: Yup.string().url('Invalid URL').required('Required'),
 });
 
 const initialValues = {
     name: '',
-    // email: '',
-    // number: '',
-    // password: '',
-    // textareaInput: '',
-    // gender: '',
-    // checkboxInput: [],
-    // radioInput: '',
-    // dateInput: '',
-    // fileInput: null,
-    // urlInput: '',
+    email: '',
+    number: '',
+    password: '',
+    textareaInput: '',
+    gender: '',
+    checkboxInput: [],
+    radioInput: '',
+    dateInput: '',
+    fileInput: null,
+    urlInput: '',
 };
 
 const ClockForm = ({ handleFormSubmit }) => {
@@ -55,21 +55,21 @@ const ClockForm = ({ handleFormSubmit }) => {
                     <div>
                         <label htmlFor="name">Name</label>
                         <Field name="name" type="text" />
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="name" />
                         </div>
                     </div>
-                    {/* <div>
+                    <div>
                         <label htmlFor="number">Number</label>
                         <Field name="number" type="number" />
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="number" />
                         </div>
                     </div>
                     <div>
                         <label htmlFor="email">Email</label>
                         <Field name="email" type="email" />
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="email" />
                         </div>
                     </div>
@@ -79,7 +79,7 @@ const ClockForm = ({ handleFormSubmit }) => {
                     <div>
                         <label htmlFor="password">Password</label>
                         <Field name="password" type="password" />
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="password" />
                         </div>
                     </div>
@@ -87,7 +87,7 @@ const ClockForm = ({ handleFormSubmit }) => {
                     <div>
                         <label htmlFor="textareaInput">Comments</label>
                         <Field name="textareaInput" as="textarea" />
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="textareaInput" />
                         </div>
                     </div>
@@ -100,7 +100,7 @@ const ClockForm = ({ handleFormSubmit }) => {
                             <option value="female" label="Female" />
                             <option value="none" label="none of above" />
                         </Field>
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="gender" />
                         </div>
                     </div>
@@ -121,7 +121,7 @@ const ClockForm = ({ handleFormSubmit }) => {
                                 Checkbox 3
                             </label>
                         </div>
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="checkboxInput" />
                         </div>
                     </div>
@@ -142,7 +142,7 @@ const ClockForm = ({ handleFormSubmit }) => {
                                 Radio 3
                             </label>
                         </div>
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="radioInput" />
                         </div>
                     </div>
@@ -150,7 +150,7 @@ const ClockForm = ({ handleFormSubmit }) => {
                     <div>
                         <label htmlFor="dateInput">Date of Birth</label>
                         <Field name="dateInput" type="date" />
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="dateInput" />
                         </div>
                     </div>
@@ -164,7 +164,7 @@ const ClockForm = ({ handleFormSubmit }) => {
                                 setFieldValue('fileInput', event.currentTarget.files[0]);
                             }}
                         />
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="fileInput" />
                         </div>
                     </div>
@@ -172,10 +172,10 @@ const ClockForm = ({ handleFormSubmit }) => {
                     <div>
                         <label htmlFor="urlInput">URL Input</label>
                         <Field name="urlInput" type="url" />
-                        <div class='error'>
+                        <div className='error'>
                             <ErrorMessage name="urlInput" />
                         </div>
-                    </div> */}
+                    </div>
 
                     <button type="submit" className='submitBtn'>Submit</button>
                 </Form>

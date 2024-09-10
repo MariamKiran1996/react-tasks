@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <ul>
-        <li><Link to='/clockForm'>Clock Form</Link></li>
+        <li><Link to='/Clock'>Clock Form</Link></li>
       </ul>
        
     </>
